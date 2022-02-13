@@ -1,0 +1,6 @@
+Sahtrese McQueen
+I used 2,000,000,000 and 3,000,000,000 to fail midpoint_A test. It failed because 2,000,000,000 is [0x77359400] and 3,000,000,000 is [0xB2D05E00] so the midpoint of 2,000,000,000 and 3,000,000,000 is expected to be [0x3B9ACA00]. However, midpoint_A failed when it computes [y-x] because its result is [0xB2D05E00 - 0x77359400 = 0x9502F900].
+
+
+Austin Powlette
+I used 2147483647 and 1 to fail midpoint_original test. It failed because 2147483647 is 0x7FFFFFFF and 1 is 0x00000001 so the midpoint of 2147483647 and 1 is expected to be 0x40000000. However, midpoint_original failed when it computes x+y because its result is 0x7FFFFFFF + 0x00000001 = 0xC0000000
