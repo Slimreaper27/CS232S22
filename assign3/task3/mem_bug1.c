@@ -10,10 +10,12 @@ int main(int argc, char * argv[]){
 
   printf("%d\n", *a);
 
+  free(a);
   a = malloc(sizeof(int *)*3);
   a[0] = 10;
   a[1] = 20;
   a[2] = 30;
 
   printf("%d %d %d\n", a[0], a[1], a[2]);
+  free(a);
 }

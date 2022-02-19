@@ -1,0 +1,5 @@
+The reason why midpoint_A doesn't work is because it overflows into the negative version of the output when the int gets too high.
+
+The reason why midpoint_B doesn't work is because it does not include negative integers, and overflows when negative inputs are involved. Only unsigned 16-bit integers will output a reliable answer.
+
+The reason why midpoint_C always works is because this equation represents the binary version of the decimal, and covers each int through this system. 
