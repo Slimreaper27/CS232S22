@@ -7,28 +7,16 @@
 void flip_bits(unsigned * x,
               unsigned start,
               unsigned end) {
-  unsigned* a = malloc(sizeof(unsigned) * (end +1));
+  unsigned tempS = 1, tempE = 1;
   for (int i = 0; i <= end; i++) {
-      if (*x % 2 == 1) {
-          a[i] = 1;
-        }
-      else {
-        a[i] = 0;
-      }
-      *x = *x >> 1;
+    if (i < start) {
+      tempS *= 2;
+      tempE *= 2;
     }
-
-  for (int i = end; i != start - 1; i--) {
-      *x = *x << 1;
-      if (a[i] == 0) {
-        *x += 1;
-        }
+    else {
+      tempE *= 2;
     }
-  for (int i = start - 1; i >= 0; i--) {
-      *x = *x << 1;
-      if (a[i] == 1) {
-        *x += 1;
-      }
-    }
+  }
+  *x = *x ^ (tempE - tempS);
   return ;
 }

@@ -7,32 +7,19 @@
 unsigned * get_bits(unsigned x,
                  unsigned start,
                  unsigned end) {
-    unsigned * a = malloc(sizeof(unsigned) * (end-start+1));
-  for (int i = 0; i < start; i++) {
-    printf("Ran ");
-    x = x >> 1;
-  }
-  
-  
-  int i = end;
-  int arr = 0;
-  while (i != start - 1) {
-    if (x % 2 == 1) {
-      printf("Odd");
-      a[arr] = 1;
-      }
-    else {
-      printf("Even");
-      a[arr] = 0;
-    }
-    
-    x = x >> 1;
-    i--;
-    arr++;
-  }
 
+  unsigned * a = malloc(sizeof(unsigned) * (end-start+1));
+  unsigned temp = 1;
+  for (unsigned i = 0; i <= end; i++) {
+    if (i >= start) {
+      if (x < (x ^ temp)) {
+        a[i - start] = 0;
+      }
+      else {
+        a[i-start] = 1;
+      }
+    }
+    temp *= 2;
+  }
   return a;
 }
-
-
-
