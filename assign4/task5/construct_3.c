@@ -6,6 +6,17 @@ typedef struct node {
 } node_t;
 
 node_t * construct_3() {
+  node_t* x = malloc(sizeof(node_t));
+  node_t* y = malloc(sizeof(node_t));
+  node_t* z = malloc(sizeof(node_t));
+  x->value = 1;
+  y->value = 2;
+  z->value = 3;
+  x->next = y;
+  y->next = z;
+  z->next = x;
+  return x;
+  
     //Allocate three pointers: 
     //x for the first Node, and temporary pointers y and z for the other two Nodes.
 
@@ -35,9 +46,15 @@ int dump_all(node_t * x) {
     printf("%d -> %d\n", y->value, z->value);
     if(z->next != x) {
     	printf("failed");
+      free(x);
+      free(y);
+      free(z);
 	return -1;
     } else {
         printf("%d -> %d\n", z->value, x->value);
+      free(x);
+      free(y);
+      free(z);
         return 0;
     }
 }

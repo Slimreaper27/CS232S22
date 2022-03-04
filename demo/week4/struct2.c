@@ -12,6 +12,7 @@ struct student * student_allocator(char * name, int id) {
 	p_stu->name = (char*) malloc(sizeof(char)*(strlen(name)+1));
 	strcpy(p_stu->name, name);
 	p_stu->id = id;	
+  return p_stu;
 }
 
 void student_deallocator(struct student *p_stu) {
