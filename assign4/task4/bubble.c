@@ -54,7 +54,7 @@ int main()
       }
     }
   }
-  /* Bubble sort ABCDEFGHIJKLMNOPQRSTUVWXYZ*/
+  /* Bubble sort */
   /* Write code here to bubble sort the strings in ascending alphabetical order
 
      Your code must meet the following requirements:
@@ -69,9 +69,8 @@ int main()
   /* Output sorted list */
   
   puts("\nIn alphabetical order, the strings are:"); 
-
   for (int i = 0; i < NUM; i++) {
-    fputs(Strings[i], stdin);
+    printf("%s", Strings[i]);
     free(Strings[i]);
   }
   /* Write a for loop here to print all the strings. Feel free to use puts/printf
