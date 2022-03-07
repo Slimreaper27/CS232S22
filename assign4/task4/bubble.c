@@ -14,7 +14,7 @@ int main()
 {
   char * Strings[NUM];
   
-  printf("\nPlease enter %d strings, one per line:\n", NUM);
+  //printf("\nPlease enter %d strings, one per line:\n", NUM);
   
   for (int i = 0; i < NUM; i++) {
     Strings[i] = malloc(sizeof(char)*LEN);
@@ -30,12 +30,12 @@ int main()
 	 Note that the newline and NULL characters will be included in LEN.
   */
 
-  puts("\nHere are the strings in the order you entered:");
+  //puts("\nHere are the strings in the order you entered:");
 
-  for (int i = 0; i < NUM; i++) {
+  /*for (int i = 0; i < NUM; i++) {
     printf("%s", Strings[i]);
-  }
-  /* Write a for loop here to print all the strings. */
+  } */
+  // Write a for loop here to print all the strings. 
 
   for (int i = 0; i < NUM - 1; i++) {
     
@@ -68,7 +68,7 @@ int main()
   */
   /* Output sorted list */
   
-  puts("\nIn alphabetical order, the strings are:"); 
+  //puts("\nIn alphabetical order, the strings are:"); 
   for (int i = 0; i < NUM; i++) {
     printf("%s", Strings[i]);
     free(Strings[i]);
