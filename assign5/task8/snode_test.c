@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
   while (p != NULL) {
     // Complete this line to print the current node's string and   
     // length (you can use strlen!)
-    printf("str: %s - length: %d\n", p->str, (int)strlen(p->str)); // TODO
+    printf("str: %s - length: %d\n", (char*)p->str, (int)strlen(p->str)); // TODO
     p = p->next;
     // TODO: add code to move p to point to next node
     // until you add this line, this program will have an infinite loop.

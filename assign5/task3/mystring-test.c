@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 	mystring_set(s, 11, 'a');
 	mystring_set(s, 15, 'z');
 	mystring_set(s, 24, 'm');
-    	mystring_set(s, 500, 's');
+  mystring_set(s, 500, 's');
 	mystring_set(s, 12, 'b');
 	mystring_set(s, 25, '!');
 
@@ -46,11 +46,10 @@ int main(int argc, char **argv) {
 		printf("getlen does not return 501. Test failed!\n");
 	}
 	mystring_delete(s);
-
 	s = mystring_new();
 	mystring_cat(s, "hello ");
 	mystring_cat(s, "world");
-	printf("hello world = %s\n",mystring_get_data(s));
+	printf("hello world = %s\n",mystring_get_data(s)); 
         mystring_delete(s);
 
 	printf("Test complete.\n");

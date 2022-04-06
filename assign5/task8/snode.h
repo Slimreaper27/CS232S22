@@ -5,13 +5,13 @@
 #include <string.h>
 struct snode {
   //TODO: change str to dynamic allcoation
-  char* str;
+  void* str;
   struct snode *next;
 };
 
 //TODO: change prototypes of functions to remove
 //length
-struct snode *snode_create(char *s) ; 
+struct snode *snode_create(void *s) ; 
 void snode_destroy(struct snode * s) ;
  
 #endif
