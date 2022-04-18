@@ -43,9 +43,9 @@ asciimation_t * asciimation_new(char * path, int fps){
 		char asciipath[4096];
 		strcpy(asciipath, path);
 		int len = strlen(asciipath);
-		if(asciipath[len-1] != '/') 
+		if(asciipath[len-1] != '/')
 			sprintf(asciipath+len, "/%d", i+1);
-		else	
+		else
 			sprintf(asciipath+len, "%d", i+1);
 		//if your path is ./data/a, and i=0, then asciipath = ./data/a/1, exactly what we want to load
 		struct frame_t * frame = frame_new(asciipath,i);
@@ -66,11 +66,16 @@ void asciimation_delete(asciimation_t * ascm){
 void asciimation_play(asciimation_t * ascm){
 	//your code here
 	//loop through the vector of frames and print out each frame, ? is to be done by you
-	//for(int i=0; i<?; i++) {
-		//printf(?);
+  //vector_t* vector = ascm->frames;
+  //int size = ascm->frames->size;
+	for(int i=0; i<3; i++) {
+    //frame_t * currentFrame = ascm->frames->data[i];
+		//printf("%s", ascm->frames->data->content);
+    //sleep(ascm->frames_per_second * ascm->frames->data[i]->rep_counter);
+    system("clear");
 		//sleep for frames_per_second * repetition_counter_of_the_frame
 		//clear the screen
-	//}
+	}
 }
 void asciimation_reverse(asciimation_t * ascm){
 	//Your code here
